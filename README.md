@@ -1,0 +1,1 @@
+Following 3h java tutorial from https://rockthejvm.com/p/java-tutorial-for-beginners
