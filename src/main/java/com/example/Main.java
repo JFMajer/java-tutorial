@@ -129,7 +129,57 @@ public class Main {
         int userAge1 = 25;
         String username2 = "Bob";
         int userAge2 = 30;
+        System.out.println(username1 + " says to " + username2 + ": \"You are " + (userAge2 - userAge1) + " years older than me!\"");
+
+        Person alice = new Person("Alice", 25);
+        Person bob = new Person("Bob", 30);
+        System.out.println(alice.getName() + " is " + alice.getAge() + " years old.");
+        System.out.println(bob);
+        //compare ages
+        System.out.println(alice.getName() + " is older than " + bob.getName() + ": " + alice.isOlderThan(bob));
+        alice.setAge(32);
+        System.out.println(alice.getName() + " is older than " + bob.getName() + ": " + alice.isOlderThan(bob));
+        System.out.println(alice);
+        // alice.age=100; // not possible, age is private
 
 
+    }
+}
+
+
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        // fields
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return name + " is " + age + " years old.";
+    }
+
+    // compare ages
+    public boolean isOlderThan(Person other) {
+        return this.age > other.age;
+    }
+
+    // getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
