@@ -80,6 +80,56 @@ public class Main {
         aNumber = 45; // aNumber becomes 45
         aNumber += 5; // aNumber becomes 50
         aNumber = aNumber + 5; // aNumber becomes 55
+        System.out.printf("Sum of %d and %d is %d%n", aNumber, ANumber, sum); // old variables are still in scope
+
+        // control statements
+        int age = 38;
+        if (age < 18) {
+            System.out.println("You are a minor.");
+        } else if (age < 65) {
+            System.out.println("You are an adult.");
+        } else {
+            System.out.println("You are a senior citizen.");
+        }
+
+        int temperature = 31;
+        if (temperature < 20) {
+            System.out.println("It's cold. Take a jacket");
+        } else {
+            if (temperature < 30) {
+                System.out.println("It's warm. Take a sweater");
+            } else {
+                System.out.println("It's hot. Take a t-shirt");
+            }
+        }
+
+        // while loops
+        System.out.println("Watch me count to 10!");
+        int x = 1;
+        while (x <= 10) {
+            System.out.println(x);
+            x++;
+        }
+
+        // do-while loops
+        x = 1;
+        do {
+            System.out.println(x);
+            x++;
+        } while (x <= 10);
+
+        System.out.println("Using for loop");
+        // for loops
+        for (int counter = 0; counter <+ 10; counter++) {
+            System.out.println(counter);
+        }
+
+        // reference types
+        String username1 = "Alice";
+        int userAge1 = 25;
+        String username2 = "Bob";
+        int userAge2 = 30;
+
 
     }
 }
