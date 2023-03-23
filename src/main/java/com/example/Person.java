@@ -3,6 +3,7 @@ package com.example;
 public class Person {
     private String name;
     private int age;
+    static boolean canFly = false;
 
     public Person(String name, int age) {
         // fields
@@ -39,5 +40,9 @@ public class Person {
     public void celebrateBirthday() {
         this.age++;
         System.out.printf("%s says: it's my birthday, i just turned %d!%n", name, age);
+    }
+
+    static String getFavouriteProgrammingLanguage() {
+        return "Java";
     }
 }

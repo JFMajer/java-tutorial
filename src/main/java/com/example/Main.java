@@ -153,8 +153,33 @@ public class Main {
         System.out.println("convert to uppercase: " + atestString.toUpperCase());
 
 
+        // arrays
+        Person[] people = new Person[3];
+        people[0] = alice;
+        people[1] = bob;
+        listPeople(people);
+        people[2] = new Person("Charlie", 40);
+        listPeople(people);
+
+        // static members and methods
+        boolean peopleCanFly = Person.canFly;
+        System.out.println("People can fly: " + peopleCanFly);
+        boolean test123 = bob.canFly;
+        System.out.println("People can fly: " + test123);
+        String ppl = Person.getFavouriteProgrammingLanguage();
+        System.out.println("Favourite programming language: " + ppl);
+    }
+
+    public static void listPeople(Person[] people) {
+        System.out.println("-----");
+        for (Person p : people) {
+            System.out.println(p);
+        }
+        System.out.println("-----");
     }
 }
+
+
 
 
 
