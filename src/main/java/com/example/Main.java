@@ -141,45 +141,20 @@ public class Main {
         System.out.println(alice.getName() + " is older than " + bob.getName() + ": " + alice.isOlderThan(bob));
         System.out.println(alice);
         // alice.age=100; // not possible, age is private
+        alice.celebrateBirthday();
+        bob.celebrateBirthday();
+
+        String atestString = "String for testing various methods";
+        System.out.println("Length of string: " + atestString.length());
+        System.out.println("Character at index 5: " + atestString.charAt(5));
+        System.out.println("Index of character 't': " + atestString.indexOf('t'));
+        System.out.println("Index of character 't' starting from index 10: " + atestString.indexOf('t', 10));
+        System.out.println("Index of substring \"test\": " + atestString.indexOf("test"));
+        System.out.println("convert to uppercase: " + atestString.toUpperCase());
 
 
     }
 }
 
 
-class Person {
-    private String name;
-    private int age;
 
-    public Person(String name, int age) {
-        // fields
-        this.name = name;
-        this.age = age;
-    }
-
-    public String toString() {
-        return name + " is " + age + " years old.";
-    }
-
-    // compare ages
-    public boolean isOlderThan(Person other) {
-        return this.age > other.age;
-    }
-
-    // getters and setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-}
